@@ -74,5 +74,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         isSideMenuHidden = !isSideMenuHidden
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            studyPlan?.remove(at: indexPath.row)
+            studyPlanTableView.reloadData()
+        }
+    }
+    
 }
 
