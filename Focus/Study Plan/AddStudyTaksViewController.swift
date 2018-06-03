@@ -35,6 +35,16 @@ class AddStudyTaksViewController: UIViewController {
     }
     
     @IBAction func saveBtnPressed(_ sender: Any) {
+        
+        if (studyPlanTaskName.text != nil) && studyPlanTaskName.text != ""
+        {
+            studyPlan?.append(studyPlanTaskName.text!)
+            studyPlanTaskName.text = ""
+           
+        }
+        
+
+        
     }
     
     @IBAction func cancelBtnPressed(_ sender: Any) {
