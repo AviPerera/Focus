@@ -15,6 +15,9 @@
 		828FBBBB20C3CA3C00BC595B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828FBBB920C3CA3C00BC595B /* LaunchScreen.storyboard */; };
 		828FBBC620C3CA3C00BC595B /* FocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FBBC520C3CA3C00BC595B /* FocusTests.swift */; };
 		828FBBD120C3CA3C00BC595B /* FocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FBBD020C3CA3C00BC595B /* FocusUITests.swift */; };
+		829DB1D620C424B70067440F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829DB1D520C424B70067440F /* TableViewController.swift */; };
+		829DB1DB20C426410067440F /* StudyPlanTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829DB1DA20C426410067440F /* StudyPlanTableView.swift */; };
+		829DB1DD20C426EE0067440F /* AddStudyTaksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829DB1DC20C426EE0067440F /* AddStudyTaksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		828FBBCC20C3CA3C00BC595B /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		828FBBD020C3CA3C00BC595B /* FocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusUITests.swift; sourceTree = "<group>"; };
 		828FBBD220C3CA3C00BC595B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		829DB1D520C424B70067440F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		829DB1DA20C426410067440F /* StudyPlanTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlanTableView.swift; sourceTree = "<group>"; };
+		829DB1DC20C426EE0067440F /* AddStudyTaksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudyTaksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		828FBBAC20C3CA3B00BC595B /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				829DB1D220C424080067440F /* Study Plan */,
 				828FBBAD20C3CA3B00BC595B /* AppDelegate.swift */,
 				828FBBAF20C3CA3B00BC595B /* ViewController.swift */,
 				828FBBB120C3CA3B00BC595B /* Main.storyboard */,
@@ -126,6 +133,16 @@
 				828FBBD220C3CA3C00BC595B /* Info.plist */,
 			);
 			path = FocusUITests;
+			sourceTree = "<group>";
+		};
+		829DB1D220C424080067440F /* Study Plan */ = {
+			isa = PBXGroup;
+			children = (
+				829DB1D520C424B70067440F /* TableViewController.swift */,
+				829DB1DA20C426410067440F /* StudyPlanTableView.swift */,
+				829DB1DC20C426EE0067440F /* AddStudyTaksViewController.swift */,
+			);
+			path = "Study Plan";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829DB1DB20C426410067440F /* StudyPlanTableView.swift in Sources */,
 				828FBBB020C3CA3B00BC595B /* ViewController.swift in Sources */,
+				829DB1DD20C426EE0067440F /* AddStudyTaksViewController.swift in Sources */,
 				828FBBB620C3CA3B00BC595B /* Focus.xcdatamodeld in Sources */,
+				829DB1D620C424B70067440F /* TableViewController.swift in Sources */,
 				828FBBAE20C3CA3B00BC595B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
