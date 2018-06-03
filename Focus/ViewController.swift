@@ -8,9 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let studyPlanData = studyPlan{
+                        return studyPlanData.count
+                    }
+                    else{
+                        return 0
+                    }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        if let studyPlanData = studyPlan{
+            cell.textLabel?.text = studyPlanData[indexPath.row]
+        }
+        return cell
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        studyPlanTableView.reloadData()
+    }
 
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var studyPlanTableView: UITableView!
     
     var isSideMenuHidden = true
     
@@ -18,12 +41,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        studyPlanTableView.delegate = self
+        studyPlanTableView.dataSource = self
+        
         //initialize side panel with -175
         sideMenuConstraint.constant = -175
         
     }
     
-    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,6 +72,14 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
         }
         isSideMenuHidden = !isSideMenuHidden
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            studyPlan?.remove(at: indexPath.row)
+            studyPlanTableView.reloadData()
+        }
     }
     
 }
