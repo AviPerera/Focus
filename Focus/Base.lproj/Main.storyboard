@@ -170,7 +170,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="rom-NZ-cyg">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="SideBar3" landscapeImage="SideBar2" largeContentSizeImage="SideBar2" id="FQP-np-Hhe">
+                        <barButtonItem key="leftBarButtonItem" largeContentSizeImage="SideBar2" systemItem="organize" id="FQP-np-Hhe">
                             <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-300"/>
                             <connections>
                                 <action selector="sideBarBtnPresses:" destination="BYZ-38-t0r" id="ygs-ej-Rof"/>
@@ -223,7 +223,6 @@
     </scenes>
     <resources>
         <image name="SideBar2" width="170" height="170"/>
-        <image name="SideBar3" width="256" height="256"/>
         <image name="mainBackground" width="2880" height="5120"/>
     </resources>
 </document>
