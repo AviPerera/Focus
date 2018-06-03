@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var studyPlanTableView: UITableView!
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

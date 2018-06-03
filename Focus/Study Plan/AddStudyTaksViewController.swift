@@ -10,18 +10,37 @@ import UIKit
 
 class AddStudyTaksViewController: UIViewController {
 
+    @IBOutlet weak var studyPlanTaskName: UITextView!
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Listen to keyboard notifications
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(with:)), name: .UIkeyboardWillShow, object: nil)
     }
 
+//    @objc func keyboardWillShow(with notification: Notification){
+//
+//
+//    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func saveBtnPressed(_ sender: Any) {
+    }
+    
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
